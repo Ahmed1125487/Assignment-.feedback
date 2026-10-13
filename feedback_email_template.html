@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<title>Assignment Feedback</title>
+<style>
+  /* Responsive tweaks for narrow (mobile) screens */
+  @media only screen and (max-width: 600px) {
+    .email-container { width: 100% !important; }
+    .email-body-padding { padding-left: 18px !important; padding-right: 18px !important; }
+    .header-padding { padding-left: 15px !important; padding-right: 15px !important; }
+  }
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#eef1f6; font-family: Arial, Helvetica, sans-serif;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#eef1f6; padding:30px 0;">
+    <tr>
+      <td align="center" style="padding:0 12px;">
+
+        <!--[if mso]>
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" align="center"><tr><td>
+        <![endif]-->
+        <table role="presentation" class="email-container" width="100%" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+
+          <!-- Header -->
+          <tr>
+            <td class="header-padding" style="background-color:#000000; padding:35px 20px; text-align:center;">
+              <div style="color:#ffffff; font-size:24px; font-weight:bold; letter-spacing:2px; margin-bottom:20px;">
+                <img src="700334231_1024641143225233_200314791338715530_n.jpg" alt="">
+              </div>
+              <div style="color:#9fb3d9; font-size:12px; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px;">
+                Assignment Feedback
+              </div>
+              <div style="color:#ffffff; font-size:22px; font-weight:bold;">
+                {{SUBJECT}}
+              </div>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td class="email-body-padding" style="padding:30px 35px;">
+
+              <p style="font-size:14px; color:#333333; margin:0 0 4px 0;">
+                Hi <strong>{{STUDENT_NAME}}</strong>,
+              </p>
+              <p style="font-size:14px; color:#555555; margin:0 0 25px 0;">
+                Good job staying consistent with your practice. Here is your detailed feedback:
+              </p>
+
+              <!-- Score Box -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:{{SCORE_BG}}; border-radius:8px; margin-bottom:20px;">
+                <tr>
+                  <td style="padding:25px; text-align:center;">
+                    <div style="font-size:12px; color:#666666; letter-spacing:1px; text-transform:uppercase; margin-bottom:10px;">
+                      Your Score
+                    </div>
+                    <div style="margin-bottom:15px;">
+                      <span style="font-size:42px; font-weight:bold; color:{{SCORE_COLOR}};">{{SCORE}}</span>
+                      <span style="font-size:20px; color:#888888;"> / {{MAX_SCORE}}</span>
+                    </div>
+
+                    <!-- Progress bar: outer = light gray track, inner td width = percent -->
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#e0e0e0; border-radius:6px;">
+                      <tr>
+                        <td style="padding:0;">
+                          <table role="presentation" cellpadding="0" cellspacing="0" width="{{PROGRESS_WIDTH}}%">
+                            <tr>
+                              <td style="background-color:{{SCORE_COLOR}}; border-radius:6px; height:8px; font-size:1px; line-height:1px;">&nbsp;</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <div style="font-size:13px; font-weight:bold; color:{{SCORE_COLOR}}; margin-top:8px;">
+                      {{PERCENT}}%
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              {{FEEDBACK_BLOCK}}
+
+              <hr style="border:none; border-top:1px solid #eeeeee; margin:20px 0;">
+
+              <!-- Motivational box -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:{{SCORE_BG}}; border-radius:6px; margin-bottom:20px;">
+                <tr>
+                  <td style="padding:15px; text-align:center; font-style:italic; font-size:13px; color:{{SCORE_COLOR}};">
+                    You are creating real progress. Keep believing in your journey.
+                  </td>
+                </tr>
+              </table>
+
+              <hr style="border:none; border-top:1px solid #eeeeee; margin:20px 0;">
+
+              <p style="font-size:13px; color:#666666; text-align:center; margin:0 0 20px 0;">
+                If you have any questions or need clarification, feel free to reach out during office hours.
+              </p>
+
+              <p style="text-align:center; margin:0 0 3px 0; font-size:14px; font-weight:bold; color:#222222;">
+                {{MENTOR_NAME}}
+              </p>
+              <p style="text-align:center; margin:0 0 20px 0; font-size:12px; color:#999999;">
+                Your Mentor
+              </p>
+
+              <!-- WhatsApp button -->
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center">
+                    <a href="https://wa.me/{{WHATSAPP_NUMBER}}" target="_blank"
+                       style="display:inline-block; background-color:#25d366; color:#ffffff; text-decoration:none; font-size:14px; font-weight:bold; padding:12px 30px; border-radius:6px;">
+                      Chat on WhatsApp
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+        </table>
+        <!--[if mso]>
+        </td></tr></table>
+        <![endif]-->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
